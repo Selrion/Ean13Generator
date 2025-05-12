@@ -5,6 +5,14 @@
 using namespace std;
 
 class Ean13Patterns {
+private:
+    static const map<char, vector<int>> leftLPatterns;
+    static const map<char, vector<int>> leftGPatterns;
+    static const map<char, vector<int>> rightPatterns;
+    static const map<char, string> firstDigitEncodings;
+    static const vector<int> guardPattern;
+    static const vector<int> centerGuardPattern;
+
 public:
     // Получаем паттерн для левой части по цифре и типу кодировки (L/G)
     static const vector<int>& getLeftPattern(char digit, char encoding);
@@ -19,13 +27,7 @@ public:
     static const vector<int>& getGuardPattern();
     static const vector<int>& getCenterGuardPattern();
 
-private:
-    static const map<char, vector<int>> leftLPatterns;
-    static const map<char, vector<int>> leftGPatterns;
-    static const map<char, vector<int>> rightPatterns;
-    static const map<char, string> firstDigitEncodings;
-    static const vector<int> guardPattern;
-    static const vector<int> centerGuardPattern;
+
 };
 
 
