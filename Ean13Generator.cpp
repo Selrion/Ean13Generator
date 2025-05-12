@@ -1,4 +1,5 @@
 ﻿#include "Ean13Generator.h"
+#include <iostream>
 #include <stdexcept>
 #include <algorithm>
 

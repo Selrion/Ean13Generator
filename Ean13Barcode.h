@@ -4,6 +4,12 @@
 using namespace std;
 
 class Ean13Barcode {
+private:
+    string ean13Code;
+    vector<int> binaryPattern;
+
+    void generateBinaryPattern();
+
 public:
     explicit Ean13Barcode(const string& ean13Code);
 
@@ -13,9 +19,4 @@ public:
     // Получаем исходный EAN-13 код
     const string& getEan13Code() const;
 
-private:
-    string ean13Code;
-    vector<int> binaryPattern;
-
-    void generateBinaryPattern();
 };
