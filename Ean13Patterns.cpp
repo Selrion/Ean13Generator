@@ -2,7 +2,8 @@
 using namespace std;
 
 // L-паттерны для левой части
-const map<char, vector<int>> Ean13Patterns::leftLPatterns = {
+const map<char, vector<int>> Ean13Patterns::leftLPatterns = 
+{
     {'0', {0,0,0,1,1,0,1}},
     {'1', {0,0,1,1,0,0,1}},
     {'2', {0,0,1,0,0,1,1}},
@@ -16,7 +17,8 @@ const map<char, vector<int>> Ean13Patterns::leftLPatterns = {
 };
 
 // G-паттерны для левой части
-const map<char, vector<int>> Ean13Patterns::leftGPatterns = {
+const map<char, vector<int>> Ean13Patterns::leftGPatterns = 
+{
     {'0', {0,1,0,0,1,1,1}},
     {'1', {0,1,1,0,0,1,1}},
     {'2', {0,0,1,1,0,1,1}},
@@ -30,7 +32,8 @@ const map<char, vector<int>> Ean13Patterns::leftGPatterns = {
 };
 
 // Паттерны для правой части
-const map<char, vector<int>> Ean13Patterns::rightPatterns = {
+const map<char, vector<int>> Ean13Patterns::rightPatterns = 
+{
     {'0', {1,1,1,0,0,1,0}},
     {'1', {1,1,0,0,1,1,0}},
     {'2', {1,1,0,1,1,0,0}},
@@ -44,7 +47,8 @@ const map<char, vector<int>> Ean13Patterns::rightPatterns = {
 };
 
 // Кодировки для первой цифры
-const map<char, string> Ean13Patterns::firstDigitEncodings = {
+const map<char, string> Ean13Patterns::firstDigitEncodings = 
+{
     {'0', "LLLLLL"},
     {'1', "LLGLGG"},
     {'2', "LLGGLG"},
@@ -61,8 +65,10 @@ const map<char, string> Ean13Patterns::firstDigitEncodings = {
 const vector<int> Ean13Patterns::guardPattern = { 1, 0, 1 };
 const vector<int> Ean13Patterns::centerGuardPattern = { 0, 1, 0, 1, 0 };
 
-const vector<int>& Ean13Patterns::getLeftPattern(char digit, char encoding) {
-    if (encoding == 'L') {
+const vector<int>& Ean13Patterns::getLeftPattern(char digit, char encoding) 
+{
+    if (encoding == 'L') 
+    {
         return leftLPatterns.at(digit);
     }
     else {
@@ -70,18 +76,22 @@ const vector<int>& Ean13Patterns::getLeftPattern(char digit, char encoding) {
     }
 }
 
-const vector<int>& Ean13Patterns::getRightPattern(char digit) {
+const vector<int>& Ean13Patterns::getRightPattern(char digit) 
+{
     return rightPatterns.at(digit);
 }
 
-const string& Ean13Patterns::getEncodingsForFirstDigit(char firstDigit) {
+const string& Ean13Patterns::getEncodingsForFirstDigit(char firstDigit) 
+{
     return firstDigitEncodings.at(firstDigit);
 }
 
-const vector<int>& Ean13Patterns::getGuardPattern() {
+const vector<int>& Ean13Patterns::getGuardPattern() 
+{
     return guardPattern;
 }
 
-const vector<int>& Ean13Patterns::getCenterGuardPattern() {
+const vector<int>& Ean13Patterns::getCenterGuardPattern() 
+{
     return centerGuardPattern;
 }
