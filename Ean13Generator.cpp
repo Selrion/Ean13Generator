@@ -6,6 +6,7 @@
 #include <iostream>
 
 
+
 char Ean13Generator::calculateChecksum(const string& code) 
 {
     int sum = 0;
@@ -50,8 +51,7 @@ string Ean13Generator::generateRandomDigits(int count)
     result.reserve(count);
 
     // Инициализация генератора случайных чисел
-    unsigned seed = static_cast<unsigned>(
-        chrono::system_clock::now().time_since_epoch().count());
+    unsigned seed = static_cast<unsigned>(chrono::system_clock::now().time_since_epoch().count());
     static mt19937 generator(seed);
     uniform_int_distribution<int> distribution(0, 9);
 

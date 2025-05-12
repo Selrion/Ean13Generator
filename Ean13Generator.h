@@ -22,7 +22,7 @@ public:
     static bool validateEan13(const string& code);
 
     // Генерация случайного валидного EAN-13 кода
-    static std::string generateRandomEan13();
+    static string generateRandomEan13();
 
     
 };
