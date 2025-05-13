@@ -15,27 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ean13Generator.cpp">
+    <ClCompile Include="Ean13Generator\src\Button.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Ean13Patterns.cpp">
+    <ClCompile Include="Ean13Generator\src\Drawing.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Ean13Barcode.cpp">
+    <ClCompile Include="Ean13Generator\src\Ean13Barcode.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Ean13Generator\src\Ean13Generator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Ean13Generator\src\Ean13Patterns.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Ean13Generator\src\main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Ean13Generator\src\TextBox.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ean13Generator.h">
+    <ClInclude Include="Ean13Generator\include\Button.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Ean13Patterns.h">
+    <ClInclude Include="Ean13Generator\include\Drawing.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Ean13Barcode.h">
+    <ClInclude Include="Ean13Generator\include\Ean13Barcode.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Ean13Generator\include\Ean13Generator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Ean13Generator\include\Ean13Patterns.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Ean13Generator\include\TextBox.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
