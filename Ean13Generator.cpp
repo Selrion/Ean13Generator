@@ -1,4 +1,4 @@
-﻿#include "Ean13Generator.h"
+#include "Ean13Generator.h"
 #include <stdexcept>
 #include <algorithm>
 #include <random>
