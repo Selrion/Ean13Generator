@@ -27,7 +27,7 @@ int main()
         }
         cout << endl;
 
-        // Проверка валидности 
+        // 
         bool isValid = Ean13Generator::validateEan13(randomEan13);
         cout << "Is valid: " << (isValid ? "Yes" : "No") << endl;
 
