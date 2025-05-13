@@ -6,22 +6,22 @@ using namespace std;
 
 class Ean13Generator {
 private:
-    // Вычисление контрольной суммы 
+    // Р’С‹С‡РёСЃР»РµРЅРёРµ РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ СЃСѓРјРјС‹
     static char calculateChecksum(const string& code);
 
-    // Валидность кода на числа 
+    // РџСЂРѕРІРµСЂРєР°, С‡С‚Рѕ СЃС‚СЂРѕРєР° СЃРѕСЃС‚РѕРёС‚ С‚РѕР»СЊРєРѕ РёР· С†РёС„СЂ
     static bool isDigits(const string& str);
 
-    //Генератор случайных чисел 
+    // Р“РµРЅРµСЂР°С‚РѕСЂ СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР»
     static string generateRandomDigits(int count);
 public:
-    // Генерация EAN-13 кода по первым 12 цифрам (13-я - контрольная сумма) 
+    // Р“РµРЅРµСЂР°С†РёСЏ EAN-13 РєРѕРґР° РїРѕ РїРµСЂРІС‹Рј 12 С†РёС„СЂР°Рј (13-СЏ - РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ СЃСѓРјРјР°)
     static string generateEan13(const string& code);
 
-    // Проверка валидности EAN-13 кода 
+    // РџСЂРѕРІРµСЂРєР° РІР°Р»РёРґРЅРѕСЃС‚Рё EAN-13 РєРѕРґР°
     static bool validateEan13(const string& code);
 
-    // Генерация случайного валидного EAN-13 кода 
+    // Р“РµРЅРµСЂР°С†РёСЏ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ РІР°Р»РёРґРЅРѕРіРѕ EAN-13 РєРѕРґР°
     static string generateRandomEan13();
 
     

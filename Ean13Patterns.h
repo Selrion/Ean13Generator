@@ -14,16 +14,16 @@ private:
     static const vector<int> centerGuardPattern;
 
 public:
-    // Получаем паттерн для левой части по цифре и типу кодировки (L/G) 
+     // РџРѕР»СѓС‡РёС‚СЊ РїР°С‚С‚РµСЂРЅ РґР»СЏ Р»РµРІРѕР№ С‡Р°СЃС‚Рё РїРѕ С†РёС„СЂРµ Рё С‚РёРїСѓ РєРѕРґРёСЂРѕРІРєРё (L/G)
     static const vector<int>& getLeftPattern(char digit, char encoding);
 
-    // Получаем паттерн для правой части по цифре 
+     // РџРѕР»СѓС‡РёС‚СЊ РїР°С‚С‚РµСЂРЅ РґР»СЏ РїСЂР°РІРѕР№ С‡Р°СЃС‚Рё РїРѕ С†РёС„СЂРµ
     static const vector<int>& getRightPattern(char digit);
 
-    // Получаем кодировки для левой части по первой цифре 
+    // РџРѕР»СѓС‡РёС‚СЊ РєРѕРґРёСЂРѕРІРєРё РґР»СЏ Р»РµРІРѕР№ С‡Р°СЃС‚Рё РїРѕ РїРµСЂРІРѕР№ С†РёС„СЂРµ
     static const string& getEncodingsForFirstDigit(char firstDigit);
 
-    // Получаем паттерны разделителей 
+    // РџРѕР»СѓС‡РёС‚СЊ РїР°С‚С‚РµСЂРЅС‹ СЂР°Р·РґРµР»РёС‚РµР»РµР№
     static const vector<int>& getGuardPattern();
     static const vector<int>& getCenterGuardPattern();
 

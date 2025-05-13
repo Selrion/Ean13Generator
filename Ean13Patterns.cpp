@@ -1,7 +1,7 @@
 #include "Ean13Patterns.h"
 using namespace std;
 
-// L-паттерны для левой части 
+// L-РїР°С‚С‚РµСЂРЅС‹ РґР»СЏ Р»РµРІРѕР№ С‡Р°СЃС‚Рё
 const map<char, vector<int>> Ean13Patterns::leftLPatterns = 
 {
     {'0', {0,0,0,1,1,0,1}},
@@ -16,7 +16,7 @@ const map<char, vector<int>> Ean13Patterns::leftLPatterns =
     {'9', {0,0,0,1,0,1,1}}
 };
 
-// G-паттерны для левой части 
+// G-РїР°С‚С‚РµСЂРЅС‹ РґР»СЏ Р»РµРІРѕР№ С‡Р°СЃС‚Рё
 const map<char, vector<int>> Ean13Patterns::leftGPatterns = 
 {
     {'0', {0,1,0,0,1,1,1}},
@@ -31,7 +31,7 @@ const map<char, vector<int>> Ean13Patterns::leftGPatterns =
     {'9', {0,0,1,0,1,1,1}}
 };
 
-// Паттерны для правой части 
+// РџР°С‚С‚РµСЂРЅС‹ РґР»СЏ РїСЂР°РІРѕР№ С‡Р°СЃС‚Рё
 const map<char, vector<int>> Ean13Patterns::rightPatterns = 
 {
     {'0', {1,1,1,0,0,1,0}},
@@ -46,7 +46,7 @@ const map<char, vector<int>> Ean13Patterns::rightPatterns =
     {'9', {1,1,1,0,1,0,0}}
 };
 
-// Кодировки для первой цифры 
+// РљРѕРґРёСЂРѕРІРєРё РґР»СЏ РїРµСЂРІРѕР№ С†РёС„СЂС‹
 const map<char, string> Ean13Patterns::firstDigitEncodings = 
 {
     {'0', "LLLLLL"},
@@ -61,7 +61,7 @@ const map<char, string> Ean13Patterns::firstDigitEncodings =
     {'9', "LGGLGL"}
 };
 
-// Паттерны разделителей 
+// РџР°С‚С‚РµСЂРЅС‹ СЂР°Р·РґРµР»РёС‚РµР»РµР№ 
 const vector<int> Ean13Patterns::guardPattern = { 1, 0, 1 };
 const vector<int> Ean13Patterns::centerGuardPattern = { 0, 1, 0, 1, 0 };
 

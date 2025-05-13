@@ -6,19 +6,19 @@
 int main() 
 {
     try {
-        // Вариант 1: Генерация по известным 12 цифрам 
+        // Р’Р°СЂРёР°РЅС‚ 1: Р“РµРЅРµСЂР°С†РёСЏ РїРѕ РёР·РІРµСЃС‚РЅС‹Рј 12 С†РёС„СЂР°Рј
         string partialCode = "460005100005";
         string ean13Code = Ean13Generator::generateEan13(partialCode);
         cout << "Generated from known prefix: " << ean13Code << endl;
 
-        // Вариант 2: Полностью случайная генерация 
+        // Р’Р°СЂРёР°РЅС‚ 2: РџРѕР»РЅРѕСЃС‚СЊСЋ СЃР»СѓС‡Р°Р№РЅР°СЏ РіРµРЅРµСЂР°С†РёСЏ
         string randomEan13 = Ean13Generator::generateRandomEan13();
         cout << "Randomly generated EAN-13: " << randomEan13 << endl;
 
-        // Создание штрих-кода для случайного кода 
+        // РЎРѕР·РґР°РЅРёРµ С€С‚СЂРёС…-РєРѕРґР° РґР»СЏ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ РєРѕРґР°
         Ean13Barcode barcode(randomEan13);
 
-        // Вывод двоичного паттерна 
+        // Р’С‹РІРѕРґ РґРІРѕРёС‡РЅРѕРіРѕ РїР°С‚С‚РµСЂРЅР°
         const auto& pattern = barcode.getBinaryPattern();
         cout << "Binary pattern: ";
         for (int bit : pattern) 
@@ -27,7 +27,7 @@ int main()
         }
         cout << endl;
 
-        // Проверка валидности бар кода
+        // РџСЂРѕРІРµСЂРєР° РІР°Р»РёРґРЅРѕСЃС‚Рё
         bool isValid = Ean13Generator::validateEan13(randomEan13);
         cout << "Is valid: " << (isValid ? "Yes" : "No") << endl;
 
