@@ -17,7 +17,7 @@ int main()
     TextBox inputBox({ 550, 50 }, font, 16);
     Button barcodeGeneration({ 550, 50 }, font, 16);
 
-    // Настройка объектов InputBox и barCodeGeneration
+    // Настройка объектов inputBox и barCodeGeneration
     setupUI(inputBox, barcodeGeneration);
     
     while (window.isOpen())
@@ -53,6 +53,7 @@ int main()
                     inputBox.setTextString(temp_code);
                     inputBox.setCountLimit(13);
                     inputBox.setLimit();
+
                     try {
                         Ean13Barcode barcode(temp_code);
                         currentBinaryPattern = barcode.getBinaryPattern();

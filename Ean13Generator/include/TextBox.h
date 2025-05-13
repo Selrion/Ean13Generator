@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -47,10 +47,15 @@ public:
 	sf::Text& getTextObject();
 	sf::RectangleShape& getRectObject();
 
+	// Ввод
 	void Typed(sf::Event::TextEntered input);
+
+	// Логика ввода
 	void inputLogic(int TypedChar);
+
 	void deleteLastChar();
 
+	// Центрирование
 	void centerPosition(sf::Vector2f position);
 };
 

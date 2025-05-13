@@ -1,8 +1,9 @@
 #include "Drawing.h"
 
+
 void barcodeDrawing(const vector<int>& binary_barcode, sf::RenderWindow& window) {
-	sf::RectangleShape line({ width_line, hight_line });
-	line.setPosition({ ScreenSize / 2 - 47 * width_line, ScreenSize / 4 - hight_line / 2});
+	sf::RectangleShape line({ width_line, height_line });
+	line.setPosition({ ScreenSize / 2 - 47 * width_line, ScreenSize / 4 - height_line / 2});
 	for (int bit : binary_barcode) {
 		if (bit == 1) {
 			line.setFillColor(sf::Color::Black);
@@ -15,6 +16,7 @@ void barcodeDrawing(const vector<int>& binary_barcode, sf::RenderWindow& window)
 	}
 
 }
+
 
 void drawUI(sf::RenderWindow& window,
     TextBox& inputBox,
@@ -35,6 +37,7 @@ void drawUI(sf::RenderWindow& window,
 
     window.display();
 }
+
 
 void setupUI(TextBox& inputBox, Button& barcodeGeneration) {
 

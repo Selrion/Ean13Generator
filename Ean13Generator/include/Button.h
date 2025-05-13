@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -38,10 +38,14 @@ public:
 	sf::RectangleShape& getRectObject();
 
 	bool getPointed();
+
+	// Проверка на наведение мышью
 	void isPointed(sf::Vector2i coords);
 
+	// Отрисовка объектов
 	void draw(sf::RenderWindow& window);
 
+	// Центрирование
 	void centerPosition(sf::Vector2f position);
 
 };
