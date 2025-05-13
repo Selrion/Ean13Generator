@@ -50,7 +50,7 @@ string Ean13Generator::generateRandomDigits(int count)
     string result;
     result.reserve(count);
 
-    // Инициализация генератора случайных чисел
+    // Инициализация генератора случайных чисел 
     unsigned seed = static_cast<unsigned>(chrono::system_clock::now().time_since_epoch().count());
     static mt19937 generator(seed);
     uniform_int_distribution<int> distribution(0, 9);
@@ -65,9 +65,9 @@ string Ean13Generator::generateRandomDigits(int count)
 
 string Ean13Generator::generateRandomEan13() 
 {
-    // Генерируем 12 случайных цифр
+    // Генерируем 12 случайных цифр 
     string partialCode = generateRandomDigits(12);
 
-    // Добавляем контрольную сумму
+    // Добавляем контрольную сумму 
     return generateEan13(partialCode);
 }

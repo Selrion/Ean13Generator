@@ -26,15 +26,15 @@ void Ean13Barcode::generateBinaryPattern()
 {
     binaryPattern.clear();
 
-    // Добавляем левый ограничитель
+    // Добавляем левый ограничитель 
     const auto& guard = Ean13Patterns::getGuardPattern();
     binaryPattern.insert(binaryPattern.end(), guard.begin(), guard.end());
 
-    // Первая цифра определяет кодировку левой части
+    // Первая цифра определяет кодировку левой части 
     char firstDigit = ean13Code[0];
     const string& encodings = Ean13Patterns::getEncodingsForFirstDigit(firstDigit);
 
-    // Кодируем левую часть (6 цифр со 2 по 7)
+    // Кодируем левую часть (6 цифр со 2 по 7) 
     for (int i = 1; i <= 6; ++i) 
     {
         char digit = ean13Code[i];
@@ -43,11 +43,11 @@ void Ean13Barcode::generateBinaryPattern()
         binaryPattern.insert(binaryPattern.end(), pattern.begin(), pattern.end());
     }
 
-    // Добавляем центральный разделитель
+    // Добавляем центральный разделитель 
     const auto& centerGuard = Ean13Patterns::getCenterGuardPattern();
     binaryPattern.insert(binaryPattern.end(), centerGuard.begin(), centerGuard.end());
 
-    // Кодируем правую часть (5 цифр с 8 по 12)
+    // Кодируем правую часть (5 цифр с 8 по 12) 
     for (int i = 7; i <= 12; ++i) 
     {
         char digit = ean13Code[i];
@@ -55,6 +55,6 @@ void Ean13Barcode::generateBinaryPattern()
         binaryPattern.insert(binaryPattern.end(), pattern.begin(), pattern.end());
     }
 
-    // Добавляем правый ограничитель
+    // Добавляем правый ограничитель 
     binaryPattern.insert(binaryPattern.end(), guard.begin(), guard.end());
 }

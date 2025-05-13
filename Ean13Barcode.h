@@ -13,10 +13,10 @@ private:
 public:
     explicit Ean13Barcode(const string& ean13Code);
 
-    // Получаем двоичное представление штрих-кода (последовательность 0 и 1)
+    // Получаем двоичное представление штрих-кода (последовательность 0 и 1) 
     const vector<int>& getBinaryPattern() const;
 
-    // Получаем исходный EAN-13 код
+    // Получаем исходный EAN-13 код 
     const string& getEan13Code() const;
 
 };
