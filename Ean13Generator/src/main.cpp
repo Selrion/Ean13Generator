@@ -8,7 +8,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode({ ScreenSize, ScreenSize }), "SFML window");
+    sf::RenderWindow window(sf::VideoMode({ ScreenSize, ScreenSize }), "EAN-13 Generator");
     sf::Font font("arialmt.ttf");
 
     vector<int> currentBinaryPattern;
