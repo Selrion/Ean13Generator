@@ -56,7 +56,7 @@ sf::RectangleShape& Button::getRectObject() {
 	return rectangle;
 }
 
-bool Button::getPointed() {
+bool Button::getPointed() const {
 	return statusPointed;
 }
 void Button::isPointed(sf::Vector2i coords) {

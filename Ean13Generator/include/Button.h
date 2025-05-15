@@ -37,7 +37,7 @@ public:
 	sf::Text& getTextObject();
 	sf::RectangleShape& getRectObject();
 
-	bool getPointed();
+	bool getPointed() const;
 
 	// Проверка на наведение мышью
 	void isPointed(sf::Vector2i coords);
